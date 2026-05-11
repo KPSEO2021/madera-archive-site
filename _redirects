@@ -1,0 +1,29 @@
+# madera.com.au — backlink-preservation redirects
+# Every existing backlinked path is preserved either as a live 200 or a 301 to a live 200.
+# Last reviewed: 2026-05-11
+
+# Legacy /union shortcut path (21 backlinks) — already served as live 200 at /union/index.html
+# Sub-collection mirrors that may have shifted are 301'd to canonical product pages
+
+# Force trailing-slash canonicals on the legacy /products/<slug> paths
+/products/union-walnut-wallet                /collections/union-walnut-wallet/                301
+/products/union-wallet-in-oak                /collections/union-wallet-in-oak/                301
+/products/union-wallet-in-cherry             /collections/union-wallet-in-cherry/             301
+/products/poquito-wallet-in-walnut           /collections/poquito-wallet-in-walnut/           301
+/products/poquito-wallet-in-oak              /collections/poquito-wallet-in-oak/              301
+/products/poquito-wallet-in-cherry           /collections/poquito-wallet-in-cherry/           301
+/products/convoy-iphone-6-case-in-walnut     /collections/convoy-iphone-6-case-in-walnut/     301
+/products/convoy-iphone-6-case-in-cherry     /collections/convoy-iphone-6-case-in-cherry/     301
+
+# Legacy /collections/<family>/products/<slug>/ mirrors (Shopify-style nested) -> flat collections paths
+/collections/all/products/poquito-wallet-in-walnut/      /collections/poquito-wallet-in-walnut/      301
+/collections/all/products/union-walnut-wallet/           /collections/union-walnut-wallet/           301
+/collections/convoy/products/convoy-iphone-6-case-in-cherry/   /collections/convoy-iphone-6-case-in-cherry/   301
+/collections/poquito/products/poquito-wallet-in-cherry/        /collections/poquito-wallet-in-cherry/         301
+/collections/union/products/union-walnut-wallet/               /collections/union-walnut-wallet/              301
+/collections/wallets/products/union-wallet-in-cherry/          /collections/union-wallet-in-cherry/           301
+/collections/wallets/products/union-wallet-in-oak/             /collections/union-wallet-in-oak/              301
+/collections/wallets/products/union-walnut-wallet/             /collections/union-walnut-wallet/              301
+
+# Legacy /collections/all/ archive index -> canonical /collections/
+/collections/all/                            /collections/                                    301

@@ -1,0 +1,148 @@
+:root{
+  --paper:#f7f3ee;
+  --ink:#1d2942;
+  --blueprint:#5f7494;
+  --orange:#d96b3a;
+  --hairline:#d5cdc0;
+  --tint:#f1eee9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:hidden;background:var(--paper);color:var(--blueprint);font-family:'Source Sans 3',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--ink);text-decoration:none;transition:color .15s}
+a:hover{color:var(--orange)}
+strong{color:var(--ink);font-weight:600}
+.mono{font-family:'Space Mono',monospace}
+.label{font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink)}
+.serif{font-family:'Source Serif 4',serif}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:fixed;top:8px;left:8px;width:auto;height:auto;background:var(--ink);color:var(--paper);padding:8px 14px;z-index:1000}
+
+/* ============ MASTHEAD ============ */
+.wb__masthead{height:80px;background:var(--paper);border-bottom:1px solid var(--ink);display:flex;align-items:center;position:relative}
+.wb__masthead-inner{max-width:880px;margin:0 auto;width:100%;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.wb__wordmark{font-family:'Source Serif 4',serif;font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink)}
+.wb__nav{font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.wb__nav a{margin:0 6px;color:var(--ink)}
+.wb__nav a:first-child{margin-left:0}
+.wb__nav span{color:var(--hairline);margin:0 2px}
+.wb__tag{position:absolute;right:18px;top:8px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--blueprint);text-transform:uppercase}
+
+/* ============ LAYOUT ============ */
+.wb__main{max-width:880px;margin:0 auto;padding:0 24px;position:relative}
+.wb__section{padding:80px 0;border-bottom:1px solid var(--hairline)}
+.wb__section:last-child{border-bottom:none}
+.wb__section-head{margin-bottom:36px}
+.wb__section-head .label{display:block;margin-bottom:14px;color:var(--ink)}
+.wb__section-head h2{font-family:'Source Serif 4',serif;font-size:2.2rem;font-weight:600;color:var(--ink);line-height:1.15;letter-spacing:-.01em;overflow-wrap:anywhere;word-break:break-word}
+.wb__section-head h1{font-family:'Source Serif 4',serif;font-size:2.6rem;font-weight:600;color:var(--ink);line-height:1.1;letter-spacing:-.015em;overflow-wrap:anywhere;word-break:break-word}
+.wb__section-head .lede{font-family:'Source Serif 4',serif;font-style:italic;font-size:1.05rem;color:var(--blueprint);margin-top:10px}
+
+/* ============ HERO (home only) ============ */
+.wb__hero{padding:80px 0 40px;display:grid;grid-template-columns:60% 40%;gap:40px;align-items:start}
+.wb__hero-frame{border:1px solid var(--ink);aspect-ratio:4/5;overflow:hidden;background:var(--tint)}
+.wb__hero-frame img{width:100%;height:100%;object-fit:cover}
+.wb__hero-copy{padding-top:8px}
+.wb__hero-copy .label{display:block;margin-bottom:18px;color:var(--orange)}
+.wb__hero-copy h1{font-family:'Source Serif 4',serif;font-size:3rem;font-weight:600;color:var(--ink);line-height:1.05;letter-spacing:-.015em;margin-bottom:18px;overflow-wrap:anywhere;word-break:break-word}
+.wb__hero-copy .kicker{font-family:'Source Serif 4',serif;font-style:italic;font-size:1.15rem;color:var(--blueprint);margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid var(--hairline)}
+.wb__hero-copy p{margin-bottom:14px;font-size:.95rem}
+.wb__hero-bar{max-width:880px;margin:40px auto 0;padding:18px 24px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink);text-align:center}
+
+/* ============ PROSE (article body) ============ */
+.wb__prose{max-width:680px;margin:0 auto;font-size:1rem;color:var(--blueprint);line-height:1.75}
+.wb__prose h1, .wb__prose h2, .wb__prose h3{font-family:'Source Serif 4',serif;color:var(--ink);line-height:1.2;margin:32px 0 14px;overflow-wrap:anywhere;word-break:break-word}
+.wb__prose h1{font-size:2.4rem;font-weight:600;letter-spacing:-.015em;margin-top:0}
+.wb__prose h2{font-size:1.5rem;font-weight:600;margin-top:36px}
+.wb__prose h3{font-size:1.15rem;font-weight:600}
+.wb__prose p{margin-bottom:18px}
+.wb__prose ul, .wb__prose ol{margin:0 0 18px 22px}
+.wb__prose li{margin-bottom:6px}
+.wb__prose a{color:var(--ink);border-bottom:1px solid var(--hairline);transition:all .15s}
+.wb__prose a:hover{color:var(--orange);border-color:var(--orange)}
+.wb__prose .kicker{font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink);display:block;margin-bottom:14px}
+.wb__prose .lede{font-family:'Source Serif 4',serif;font-style:italic;font-size:1.15rem;color:var(--blueprint);margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid var(--hairline)}
+.wb__prose blockquote{border-left:2px solid var(--orange);padding-left:18px;font-family:'Source Serif 4',serif;font-style:italic;color:var(--ink);margin:24px 0;font-size:1.1rem}
+.wb__prose hr{border:none;border-top:1px solid var(--hairline);margin:32px 0}
+.wb__prose figure{margin:24px 0}
+.wb__prose figcaption{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--blueprint);margin-top:8px;text-align:center}
+.wb__prose strong{color:var(--ink);font-weight:600}
+
+/* ============ CATALOGUE TABLE ============ */
+.wb__catalogue{width:100%;border-collapse:collapse;font-size:.95rem}
+.wb__catalogue thead th{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink);text-align:left;padding:14px 12px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);font-weight:700}
+.wb__catalogue tbody td{padding:18px 12px;border-bottom:1px solid var(--hairline);color:var(--blueprint);vertical-align:baseline}
+.wb__catalogue tbody tr{transition:background .15s}
+.wb__catalogue tbody tr:hover{background:var(--tint)}
+.wb__catalogue td.num{font-family:'Space Mono',monospace;font-size:.85rem;color:var(--ink);width:60px}
+.wb__catalogue td.piece a{font-family:'Source Serif 4',serif;font-size:1.05rem;color:var(--ink);font-weight:600}
+.wb__catalogue td.piece a:hover{color:var(--orange)}
+.wb__catalogue td.status{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--blueprint);width:110px}
+.wb__catalogue td.timber,.wb__catalogue td.year{font-family:'Space Mono',monospace;font-size:.85rem;color:var(--blueprint)}
+
+/* ============ PRODUCT PAGE LAYOUT ============ */
+.wb__product{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;padding:60px 0}
+.wb__product-frame{border:1px solid var(--ink);aspect-ratio:4/5;overflow:hidden;background:var(--tint)}
+.wb__product-frame img{width:100%;height:100%;object-fit:cover}
+.wb__product-copy .label{display:block;margin-bottom:12px;color:var(--orange)}
+.wb__product-copy h1{font-family:'Source Serif 4',serif;font-size:2.4rem;font-weight:600;color:var(--ink);line-height:1.1;letter-spacing:-.015em;margin-bottom:18px;overflow-wrap:anywhere;word-break:break-word}
+.wb__product-copy .meta{display:flex;gap:24px;padding:14px 0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);margin-bottom:24px;flex-wrap:wrap}
+.wb__product-copy .meta dt{font-family:'Space Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--blueprint);margin-bottom:4px}
+.wb__product-copy .meta dd{font-family:'Source Serif 4',serif;font-size:.95rem;color:var(--ink);font-weight:600}
+.wb__product-copy .meta > div{min-width:80px}
+.wb__product-copy p{margin-bottom:16px;font-size:.97rem}
+.wb__product-copy h3{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink);margin:24px 0 10px;font-weight:700}
+.wb__product-copy ul{list-style:none;padding:0}
+.wb__product-copy li{padding:6px 0;border-bottom:1px solid var(--hairline);font-size:.92rem}
+.wb__product-copy li:last-child{border-bottom:none}
+
+/* ============ COLLECTION GRID ============ */
+.wb__collection{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;padding:20px 0}
+.wb__collection-card{display:block;color:inherit}
+.wb__collection-card .frame{border:1px solid var(--ink);aspect-ratio:4/5;overflow:hidden;background:var(--tint);margin-bottom:14px}
+.wb__collection-card .frame img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.wb__collection-card:hover .frame img{transform:scale(1.03)}
+.wb__collection-card .title{font-family:'Source Serif 4',serif;font-size:1.1rem;color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
+.wb__collection-card .meta{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--blueprint);display:block}
+.wb__collection-card:hover .title{color:var(--orange)}
+
+/* ============ JOURNAL LIST ============ */
+.wb__journal{border-top:1px solid var(--ink)}
+.wb__journal-row{display:grid;grid-template-columns:130px 1fr 130px;gap:24px;padding:22px 0;border-bottom:1px solid var(--hairline);align-items:baseline}
+.wb__journal-row .date{font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink)}
+.wb__journal-row .title{font-family:'Source Serif 4',serif;font-style:italic;font-size:1.2rem;color:var(--ink);overflow-wrap:anywhere}
+.wb__journal-row .title a{color:var(--ink)}
+.wb__journal-row .title a:hover{color:var(--orange)}
+.wb__journal-row .more{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--orange);text-align:right}
+
+/* ============ FOOTER ============ */
+.wb__footer{background:var(--paper);border-top:1px solid var(--ink);margin-top:0;padding:60px 0 0}
+.wb__footer-inner{max-width:880px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+.wb__footer h5{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink);margin-bottom:14px;font-weight:700}
+.wb__footer ul{list-style:none}
+.wb__footer li{padding:4px 0;font-size:.92rem}
+.wb__footer li a{color:var(--blueprint)}
+.wb__footer li a:hover{color:var(--orange)}
+.wb__footer .brand-block .wm{font-family:'Source Serif 4',serif;font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);display:block;margin-bottom:10px}
+.wb__footer .brand-block p{font-size:.9rem}
+.wb__footer-strip{max-width:880px;margin:50px auto 0;padding:18px 24px;border-top:1px solid var(--hairline);display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--blueprint)}
+
+/* ============ MOBILE ============ */
+@media (max-width:800px){
+  .wb__hero{grid-template-columns:1fr;gap:24px;padding:40px 0 20px}
+  .wb__hero-copy h1{font-size:2.2rem}
+  .wb__product{grid-template-columns:1fr;gap:24px}
+  .wb__journal-row{grid-template-columns:1fr;gap:6px}
+  .wb__journal-row .more{text-align:left}
+  .wb__footer-inner{grid-template-columns:1fr 1fr;gap:28px}
+  .wb__footer-strip{flex-direction:column;gap:8px}
+  .wb__masthead{height:auto;padding:14px 0}
+  .wb__masthead-inner{flex-direction:column;gap:10px}
+  .wb__tag{position:static;margin-top:6px}
+  .wb__catalogue td.timber{display:none}
+  .wb__catalogue th.timber{display:none}
+  .wb__section{padding:50px 0}
+  .wb__section-head h1{font-size:2rem}
+  .wb__section-head h2{font-size:1.7rem}
+  .wb__prose h1{font-size:1.9rem}
+}
